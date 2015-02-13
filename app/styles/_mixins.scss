@@ -1,0 +1,47 @@
+@mixin transform($value){
+    -ms-transform: $value; /* IE 9 */
+    -webkit-transform: $value; /* Chrome, Safari, Opera */
+    transform: $value;
+}
+@mixin transition($value){
+    -webkit-transition: $value; /* For Safari 3.1 to 6.0 */
+    transition: $value;
+}
+@mixin transition-delay($value){
+    -webkit-transition-delay: $value; /* For Safari 3.1 to 6.0 */
+    transition-delay: $value;
+}
+@mixin desaturate($value){
+    -webkit-filter: grayscale($value);
+    filter: grayscale($value);
+}
+@mixin blur($value){
+    -webkit-filter: blur($value);
+    -moz-filter: blur($value);
+    -o-filter: blur($value);
+    -ms-filter: blur($value);
+    filter: blur($value);
+}
+@mixin box-shadow($value){
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+@mixin text-shadow($value){
+    -webkit-text-shadow: $value;
+    -moz-text-shadow: $value;
+    text-shadow: $value;
+}
+@mixin spacing($i, $end){
+    .spacing-#{$i}{
+        margin-top: #{$i}px;
+        margin-bottom: #{$i}px;
+    }
+    @if $i <= $end {
+        @include spacing($i + 5, $end);
+    }
+}
+@mixin radius($value){
+    -webkit-border-radius: $value;
+    border-radius: $value;
+}

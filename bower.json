@@ -1,0 +1,8 @@
+{
+    "name": "asr",
+    "private": true,
+    "dependencies": {
+        "bootstrap-sass-official": "~3.2.0",
+        "fullpage.js": "~2.5.6"
+    }
+}
